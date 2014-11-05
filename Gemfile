@@ -7,6 +7,11 @@ gem 'rails', '4.1.6'
 group :development do
   gem 'sqlite3'
 end
+gem 'omniauth'
+gem 'omniauth-facebook'#for facebook
+gem 'omniauth-google-oauth2'#for google
+gem 'omniauth-google-apps' #for gmail
+gem 'omniauth-twitter' #twitter
 
 group :production do
   gem 'pg'

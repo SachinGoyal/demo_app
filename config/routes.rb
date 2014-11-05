@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   resources :products
 
   resources :categories
-
+ 
   get 'home/index'
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   
   resources :home do
     collection do
