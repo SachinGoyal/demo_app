@@ -2,15 +2,15 @@ Rails.application.routes.draw do
   resources :products
 
   resources :categories
- 
-  get 'home/index'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   
   resources :home do
     collection do
       get :product
+      get :user
     end
+ 
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

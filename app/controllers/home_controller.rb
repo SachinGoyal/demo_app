@@ -8,4 +8,8 @@ class HomeController < ApplicationController
   	@products = @category.products
   	render :partial => "products"
   end
+
+  def user
+    @users = User.all
+  end
 end
