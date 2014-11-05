@@ -41,13 +41,13 @@ ActiveRecord::Schema.define(version: 20141105061731) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
     t.string   "role",                   default: "Guest"
   end
 
