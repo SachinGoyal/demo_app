@@ -1,2 +1,22 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h3> Select Category</h3>
+<%= select("Category", "Category_id", @categories.all.collect {|p| [ p.name, p.id ] })%>
+
+
+<div class="product">
+	
+</div>
+
+<%#= link_to "New Category", new_category_path%>
+
+<%#= link_to "New Product", new_product_path%>
+
+<script type="text/javascript">
+	$('#Category_Category_id').change(function() {
+		var value = $(this).find(':selected').val();
+		$.get("/home/product?id="+value,function(data,status){
+    		$(".product").html(data);
+  		});
+	
+	});
+</script>
+
