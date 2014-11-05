@@ -12,7 +12,7 @@ gem 'omniauth-facebook'#for facebook
 gem 'omniauth-google-oauth2'#for google
 gem 'omniauth-google-apps' #for gmail
 gem 'omniauth-twitter' #twitter
-
+gem 'rails_12factor'
 group :production do
   gem 'pg'
 end
